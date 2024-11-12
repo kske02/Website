@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lala's Shop</title>
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+    <style>
+        .item-H {
+            grid-area: header;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item-L {
+            grid-area: lside;
+            height: 825px;
+            align-items: center;
+            justify-content: center;
+        }
+        .item-M {
+            grid-area: main;
+            height: 825px;
+        }
+        .item-F {
+            grid-area: footer;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gridcontainer {
+            display: grid;
+            grid-template-areas:
+            'header header header header header'
+            'lside main main main main'
+            'footer footer footer footer footer';
+            grid-gap: 5px;
+            padding: 10px;
+        }
+        .item-Pink {
+            background-color: #ff5757;
+            border: 2px solid #de4c4c; 
+            padding: 30px; 
+            font-size: 20px;
+            text-align: center; 
+        }
+        .item-SPink {
+            background-color: #e8bbac;
+            border: 2px solid #de4c4c; 
+            padding: 30px; 
+            font-size: 20px;
+            text-align: center; 
+        }
+        @font-face {
+            font-family: 'THSarabun';
+            src: url(font/THSarabun/THSarabun.ttf);
+        }
+        @font-face {
+            font-family: 'FCYingThai';
+            src: url(font/FCYingThai/FC\ YingThai\ Text.otf);
+        }
+    </style>
+    <link rel="stylesheet" href="button.css">
+</head>
+<body style="background-color: #cd544c;">
+    <div class="gridcontainer">
+        <div class="item-H item-Pink">
+            <img src="image/Header.png" alt="Header">
+        </div>
+        <div class="item-L item-SPink">
+            <p style="font-family: 'FCYingThai'; font-size: 30px; color: #764b36;"><b>เมนู</b></p>
+            <a href="register.html">
+                <button style="margin: auto;">
+                    <span style="font-family: 'FCYingThai';">สมัครสมาชิก</span>
+                </button>
+            </a>
+        </div>
+        <div class="item-M item-SPink">
+            <p style="font-family: 'FCYingThai'; font-size: 30px; color: #764b36;"><b>รายการสินค้า</b></p>
+            <form action="https://httpbin.org/post" method="post">
+                <table style="display: flex; align-items: center; justify-content: center;">
+                    <tr style="color: #764b36; font-family: 'THSarabun'; font-size: 25px;">
+                        <th>
+                            หนังสือ
+                        </th>
+                        <th>
+                            ไอแพด
+                        </th>
+                        <th>
+                            ดินสอ
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="height: 250px;"><img src="image/books.png" style="height: 170px;"></th>
+                        <th style="height: 250px;"><img src="image/ipad.png" style="height: 180px;"></th>
+                        <th style="height: 250px;"><img src="image/pencil.png" style="height: 180px;"></th>
+                    </tr>
+                    <tr style="color: #764b36;">
+                        <th>
+                            <label for="quanbookid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanbookid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4+ books">4 ชิ้นขึ้นไป</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanipadid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanipadid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 ipad">ไม่รับสินค้า</option>
+                                <option value="1 ipad">1 ชิ้น</option>
+                                <option value="2 ipads">2 ชิ้น</option>
+                                <option value="3 ipads">3 ชิ้น</option>
+                                <option value="4+ ipads">4 ชิ้นขึ้นไป</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 pencil">ไม่รับสินค้า</option>
+                                <option value="1 pencil">1 ชิ้น</option>
+                                <option value="2 pencils">2 ชิ้น</option>
+                                <option value="3 pencils">3 ชิ้น</option>
+                                <option value="4+ pencils">4 ชิ้นขึ้นไป</option>
+                            </select>
+                        </th>
+                    </tr>
+                </table>
+                <br>
+                <table style="display: flex; align-items: center; justify-content: center;">
+                    <tr style="color: #764b36; font-family: 'THSarabun'; font-size: 25px;">
+                        <th>
+                            น้ำอัดลม
+                        </th>
+                        <th>
+                            หมูกระทะ
+                        </th>
+                        <th>
+                            ช้อนส้อม
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="height: 250px;"><img src="image/coke.png" style="height: 190px;"></th>
+                        <th style="height: 250px;"><img src="image/MKT.png" style="height: 180px;"></th>
+                        <th style="height: 250px;"><img src="image/spandfk.png" style="height: 170px;"></th>
+                    </tr>
+                    <tr style="color: #764b36;">
+                        <th>
+                            <label for="quanbookid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanbookid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4+ books">4 ชิ้นขึ้นไป</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanipadid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanipadid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 ipad">ไม่รับสินค้า</option>
+                                <option value="1 ipad">1 ชิ้น</option>
+                                <option value="2 ipads">2 ชิ้น</option>
+                                <option value="3 ipads">3 ชิ้น</option>
+                                <option value="4+ ipads">4 ชิ้นขึ้นไป</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 pencil">ไม่รับสินค้า</option>
+                                <option value="1 pencil">1 ชิ้น</option>
+                                <option value="2 pencils">2 ชิ้น</option>
+                                <option value="3 pencils">3 ชิ้น</option>
+                                <option value="4+ pencils">4 ชิ้นขึ้นไป</option>
+                            </select>
+                        </th>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="ยืนยันคำสั่งซื้อ" style="font-family: 'THSarabun'; font-size: 20px; color: #764b36;">
+            </form>
+        </div>
+        <div class="item-F item-Pink">
+            <span><img src="image/shopping.gif" style="height: 100px;"></span>
+            <address style="font-family: 'THSarabun'; color: #764b36; font-size: 25px;">
+                <b>99 หมู่ที่ 18 ถ. พหลโยธิน ตำบล คลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120</b><br>
+                <b>Line: lalasshop โทร 094-804-6236</b>
+            </address>
+            <span><img src="image/shopping.gif" style="height: 100px;"></span>
+        </div>
+    </div>
+</body>
+</html>
